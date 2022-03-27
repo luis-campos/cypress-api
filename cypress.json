@@ -1,0 +1,9 @@
+{
+    "video": false,
+    "reporterOptions": {
+        "charts": true,
+        "reportDir": "cypress/reports/mochawesome-report",
+        "overwrite": false,
+        "reportPageTitle": "custom-title"
+    }
+}

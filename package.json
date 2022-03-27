@@ -1,0 +1,20 @@
+{
+  "name": "cypress-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:reports": "rm -rf cypress/reports/mochawesome-report/*",
+    "test": "cypress run --spec \"**/*.spec.js\"",
+    "reports": "cypress run --spec \"**/*.spec.js\" --reporter mochawesome",
+    "cypress": "./node_modules/.bin/cypress open",
+    "testReport": "npm run clean:reports && npm run reports"
+  },
+  "author": "Luis Campos",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^9.5.2",
+    "ajv": "^8.11.0",
+    "mochawesome": "^3.1.1"
+  }
+}

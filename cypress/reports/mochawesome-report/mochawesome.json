@@ -1,0 +1,95 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-03-26T23:48:06.097Z",
+    "end": "2022-03-26T23:48:08.104Z",
+    "duration": 2007,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "a67b32ac-8b73-4e05-b9eb-816b3c04703e",
+    "title": "",
+    "fullFile": "cypress/integration/test.spec.js",
+    "file": "cypress/integration/test.spec.js",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "c9ada773-d6d9-4d37-8380-4808121a681a",
+        "title": "Grupo de testes swagger PetStore",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Add a new pet to the store",
+            "fullTitle": "Grupo de testes swagger PetStore Add a new pet to the store",
+            "duration": 1532,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.request({\n  method: 'POST',\n  url: 'https://petstore.swagger.io/v2/pet',\n  body: {\n    \"id\": 0,\n    \"category\": {\n      \"id\": 0,\n      \"name\": \"string\"\n    },\n    \"name\": \"doggie\",\n    \"photoUrls\": [\"string\"],\n    \"tags\": [{\n      \"id\": 0,\n      \"name\": \"string\"\n    }],\n    \"status\": \"available\"\n  }\n}).then(({\n  status,\n  body\n}) => {\n  expect(status).to.be.eql(200);\n  cy.validateSchema('petSchema', body);\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "f463820b-04b8-49f5-82b2-068a6feb6516",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Returns pet inventories by status",
+            "fullTitle": "Grupo de testes swagger PetStore Returns pet inventories by status",
+            "duration": 438,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.request({\n  method: 'GET',\n  url: 'https://petstore.swagger.io/v2/store/inventory'\n}).then(({\n  status,\n  body\n}) => {\n  expect(status).to.be.eql(200);\n  cy.validateSchema('storeSchema', body);\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "47426824-6c54-41e9-a1cf-3b929379fff2",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "f463820b-04b8-49f5-82b2-068a6feb6516",
+          "47426824-6c54-41e9-a1cf-3b929379fff2"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 1970,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2022
+}
