@@ -6,14 +6,12 @@ export const validateSchema = (jsonSchema, body) => {
         const validate = ajv.compile(schema)
         const valid = validate(body)
         if (!valid) {
-            console.log(validate.errors).then(() => {
-                throw new Error('Erro de contrato!')
-            })
+            throw new Error(`ERRO DE CONTRATO! \n ERRO: ${JSON.stringify(validate.errors)} \n BODY: ${JSON.stringify(body)}`)
         } else {
             Cypress.log({
                 name: 'validateSchema',
                 displayName: 'schema',
-                message: `${jsonSchema} validado!`
+                message: `${jsonSchema} validado! \n ${JSON.stringify(body)}`
             })
         }
     })
