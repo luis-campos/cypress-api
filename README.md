@@ -1,5 +1,11 @@
 # Teste de Api e contrato com cypress
 
+## Introdução
+Criei este projeto para aprender um pouco sobre testes de APIs com Cypress.io e utilizei a API [PetStore](https://petstore.swagger.io/) como base.<br />
+Framework de teste: [Cypress.io](https://www.cypress.io/) - ```13.4.0```<br />
+Validador de Schema: [Ajv](https://ajv.js.org/) - ```8.11.0```<br />
+Framework de report: [Mochawesome](https://www.npmjs.com/package/mochawesome) - ```7.1.3```
+
 ## Instalando dependências
 1. Para instalar as dependências do projeto, execute o comando:
 ```
